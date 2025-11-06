@@ -31,6 +31,8 @@ def gen():
     response = requests.get(f"https://discordapp.com/api/v6/entitlements/gift-codes/{random_code}?with_application=false&with_subscription_plan=true")
     if response.status_code == 200:
         print(colorama.Fore.GREEN + f"[200] Code nitro valide : discord.gift/{random_code}")
+        with open("codes_valides.txt", "a") as f:
+            f.write(f"https://discord.gift/{random_code}\n")
     
     elif response.status_code == 429:
         print(colorama.Fore.YELLOW + "[429] Rate limit atteinte, attente de 16 secondes...")
@@ -40,7 +42,7 @@ def gen():
         print(colorama.Fore.RED + f"[404] Code nitro invalide : discord.gift/{random_code}")
 
 def hello():
-    print(colorama.Fore.YELLOW + "Développé par 𝖑𝖆𝖈𝖈ø𝖒 💖")
+    print(colorama.Fore.YELLOW + "Développé par just_laccom 💖")
     hello_choice = input(colorama.Fore.RED + "Voullez vous démarrez la génération ? O/N ")
     if hello_choice  in ['0', 'o', 'O']:
         clear()
@@ -51,7 +53,7 @@ def hello():
             time.sleep(0.5)
     else :
         exit()
-
+        
 clear()
 ascii("RED")
 hello()
