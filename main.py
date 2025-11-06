@@ -40,7 +40,7 @@ def gen():
         print(colorama.Fore.RED + f"[404] Code nitro invalide : discord.gift/{random_code}")
 
 def hello():
-    print(colorama.Fore.YELLOW + "Développé par just_laccom 💖")
+    print(colorama.Fore.YELLOW + "Développé par 𝖑𝖆𝖈𝖈ø𝖒 💖")
     hello_choice = input(colorama.Fore.RED + "Voullez vous démarrez la génération ? O/N ")
     if hello_choice  in ['0', 'o', 'O']:
         clear()
